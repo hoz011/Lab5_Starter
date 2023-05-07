@@ -10,9 +10,11 @@ function init() {
 
 const horn_select = document.getElementById("horn-select");
 var main_img = document.querySelector("img");
+console.log(horn_select);
+console.log(main_img.src);
 
 horn_select.addEventListener("change", (event) => {
-  if (EventTarget.value == 'party-horn') {
+  if (event.target.value == 'party-horn') {
     main_img.src = "assets/images/party-horn.svg";
   }
 });
