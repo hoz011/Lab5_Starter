@@ -14,6 +14,7 @@ var main_audio = document.querySelector("audio");
 var play_button = document.querySelector("button");
 var vol_input = document.getElementById("volume");
 var vol_img = document.getElementById("volume-controls").querySelector("img");
+const confetti = new JSConfetti();
 
 horn_select.addEventListener("change", (event) => {
   if (event.target.value == 'party-horn') {
@@ -29,8 +30,11 @@ horn_select.addEventListener("change", (event) => {
 });
 
 play_button.addEventListener("click", (event) => {
+  if (horn_select.value == 'party-horn') {
+    confetti.addConfetti();
+  }
   main_audio.play();
-})
+});
 
 vol_input.addEventListener("input", iconChange);
 
@@ -46,5 +50,6 @@ function iconChange() {
   } else {
     vol_img.src = "assets/icons/volume-level-3.svg"
   }
+  main_audio.volume = v / 100;
 }
 
