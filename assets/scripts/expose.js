@@ -32,7 +32,7 @@ play_button.addEventListener("click", (event) => {
   main_audio.play();
 })
 
-vol_input.addEventListener("change", iconChange);
+vol_input.addEventListener("input", iconChange);
 
 function iconChange() {
   var v = vol_input.value;
