@@ -12,6 +12,8 @@ const horn_select = document.getElementById("horn-select");
 var main_img = document.querySelector("img");
 var main_audio = document.querySelector("audio");
 var play_button = document.querySelector("button");
+var vol_input = document.getElementById("volume");
+var vol_img = document.getElementById("volume-controls").getElementsByTagName("img");
 
 horn_select.addEventListener("change", (event) => {
   if (event.target.value == 'party-horn') {
@@ -30,5 +32,9 @@ play_button.addEventListener("click", (event) => {
   main_audio.play();
 })
 
-
+vol_input.addEventListener("change", (event) => {
+  if (event.target.value == 0) {
+    vol_img.src = "assets/icons/volume-level-0.svg";
+  }
+});
 
