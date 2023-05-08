@@ -32,15 +32,19 @@ play_button.addEventListener("click", (event) => {
   main_audio.play();
 })
 
-vol_input.addEventListener("change", (event) => {
-  if (event.target.value == 0) {
+vol_input.addEventListener("change", iconChange);
+
+function iconChange() {
+  var v = vol_input.value;
+
+  if (v == 0) {
     vol_img.src = "assets/icons/volume-level-0.svg";
-  } else if (1 <= event.target.value < 33) {
+  } else if (1 <= v < 33) {
     vol_img.src = "assets/icons/volume-level-1.svg";
-  } else if (33 <= event.target.value < 67) {
+  } else if (33 <= v < 67) {
     vol_img.src = "assets/icons/volume-level-2.svg";
   } else {
     vol_img.src = "assets/icons/volume-level-3.svg"
   }
-});
+}
 
