@@ -11,8 +11,7 @@ function init() {
 const horn_select = document.getElementById("horn-select");
 var main_img = document.querySelector("img");
 var main_audio = document.querySelector("audio");
-console.log(horn_select);
-console.log(main_img.src);
+var play_button = document.querySelector("button");
 
 horn_select.addEventListener("change", (event) => {
   if (event.target.value == 'party-horn') {
@@ -27,7 +26,9 @@ horn_select.addEventListener("change", (event) => {
   }
 });
 
-
+play_button.addEventListener("click", (event) => {
+  main_audio.play();
+})
 
 
 
