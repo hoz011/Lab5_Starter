@@ -13,7 +13,7 @@ var main_img = document.querySelector("img");
 var main_audio = document.querySelector("audio");
 var play_button = document.querySelector("button");
 var vol_input = document.getElementById("volume");
-var vol_img = document.getElementById("volume-controls").getElementsByTagName("img");
+var vol_img = document.getElementById("volume-controls").querySelector("img");
 
 horn_select.addEventListener("change", (event) => {
   if (event.target.value == 'party-horn') {
