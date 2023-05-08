@@ -39,9 +39,9 @@ function iconChange() {
 
   if (v == 0) {
     vol_img.src = "assets/icons/volume-level-0.svg";
-  } else if (1 <= v < 33) {
+  } else if (v >= 1 && v < 33) {
     vol_img.src = "assets/icons/volume-level-1.svg";
-  } else if (33 <= v < 67) {
+  } else if (v >= 33 && v < 67) {
     vol_img.src = "assets/icons/volume-level-2.svg";
   } else {
     vol_img.src = "assets/icons/volume-level-3.svg"
